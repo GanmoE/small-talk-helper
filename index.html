@@ -48,11 +48,8 @@ function changeTopic() {
 
   document.getElementById("topic").innerHTML =
     topics[randomNumber];
-let expressionNumber =
-  Math.floor(Math.random() * expressions.length);
-
 document.getElementById("expression").innerHTML =
-  expressions[expressionNumber];
+  expressions.join("<br>");
 }
 
 </script>
