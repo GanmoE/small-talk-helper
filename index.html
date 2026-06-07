@@ -31,40 +31,60 @@ Today's Topic
 
 <h3>Useful Expressions</h3>
 
-<p id="expression">I think...</p>
+<p id="expression">A good friend is someone who...</p>
 
 <script>
 function changeTopic() {
   let topics = [
-    "What is a good friend?",
-    "Is it important to have hobbies?",
-    "Do you enjoy reading books?",
-    "Should students use smartphones at school?",
-    "What makes a good teacher?",
-    "What is your favorite season?",
-    "Do you like studying English?",
-    "Is money important for happiness?",
-    "Would you like to live abroad?",
-    "What do you do in your free time?"
-  ];
-
-  let expressions = [
-    "I think...",
-    "In my opinion...",
-    "For example...",
-    "This is because...",
-    "I agree with you because...",
-    "I don't think so because...",
-    "That's a good point.",
-    "I see what you mean."
+    {
+      topic: "What is a good friend?",
+      expressions: [
+        "A good friend is someone who...",
+        "I think a good friend should...",
+        "For example, ..."
+      ]
+    },
+    {
+      topic: "Is it important to have hobbies?",
+      expressions: [
+        "I think hobbies are important because...",
+        "Hobbies help us...",
+        "For example, ..."
+      ]
+    },
+    {
+      topic: "Do you enjoy reading books?",
+      expressions: [
+        "I enjoy reading books because...",
+        "My favorite book is...",
+        "Reading helps me..."
+      ]
+    },
+    {
+      topic: "Should students use smartphones at school?",
+      expressions: [
+        "I agree because...",
+        "I disagree because...",
+        "Smartphones can help students..."
+      ]
+    },
+    {
+      topic: "Would you like to live abroad?",
+      expressions: [
+        "I would like to live in...",
+        "One reason is...",
+        "I could learn..."
+      ]
+    }
   ];
 
   let randomNumber = Math.floor(Math.random() * topics.length);
+  let selectedTopic = topics[randomNumber];
 
   document.getElementById("topic").innerHTML =
-    topics[randomNumber];
+    selectedTopic.topic;
 
   document.getElementById("expression").innerHTML =
-    expressions.join("<br>");
+    selectedTopic.expressions.join("<br>");
 }
 </script>
