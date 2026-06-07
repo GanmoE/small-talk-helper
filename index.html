@@ -8,24 +8,51 @@ Today's Topic
 What is a good friend?
 </p>
 
+<h3>Useful Expressions</h3>
+
+<p id="expression">
+I think...
+</p>
+
 <script>
 
 function changeTopic() {
 
   let topics = [
-    "What is a good friend?",
-    "Is it important to have hobbies?",
-    "Should students use smartphones at school?",
-    "Do you enjoy reading books?",
-    "What makes a good teacher?"
-  ];
+  "What is a good friend?",
+  "Is it important to have hobbies?",
+  "Do you enjoy reading books?",
+  "Should students use smartphones at school?",
+  "What makes a good teacher?",
+  "What is your favorite season?",
+  "Do you like studying English?",
+  "Is money important for happiness?",
+  "Would you like to live abroad?",
+  "What do you do in your free time?"
+];
 
+  let expressions = [
+  "I think...",
+  "In my opinion...",
+  "For example...",
+  "This is because...",
+  "I agree with you because...",
+  "I don't think so because...",
+  "That's a good point.",
+  "I see what you mean."
+];
+
+  
   let randomNumber =
     Math.floor(Math.random() * topics.length);
 
   document.getElementById("topic").innerHTML =
     topics[randomNumber];
+let expressionNumber =
+  Math.floor(Math.random() * expressions.length);
 
+document.getElementById("expression").innerHTML =
+  expressions[expressionNumber];
 }
 
 </script>
