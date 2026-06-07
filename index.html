@@ -11,8 +11,21 @@ What is a good friend?
 <script>
 
 function changeTopic() {
+
+  let topics = [
+    "What is a good friend?",
+    "Is it important to have hobbies?",
+    "Should students use smartphones at school?",
+    "Do you enjoy reading books?",
+    "What makes a good teacher?"
+  ];
+
+  let randomNumber =
+    Math.floor(Math.random() * topics.length);
+
   document.getElementById("topic").innerHTML =
-  "Is it important to have hobbies?";
+    topics[randomNumber];
+
 }
 
 </script>
